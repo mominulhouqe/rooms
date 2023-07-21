@@ -1,0 +1,10 @@
+.white-background {
+    background-color: rgb(14, 8, 8);
+    color: rgb(250, 247, 247); /* You can set the text color to black or any other color that suits your design */
+}
+.btn-hover:hover{
+
+    background-color: black;
+    color: white;
+
+}

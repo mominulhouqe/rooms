@@ -119,10 +119,13 @@ export class RoomsComponent implements OnInit{
     return this.cards.slice(startIndex, startIndex + this.itemsPerPage);
   }
 
-  constructor() { }
+  // Add the hoveredPage property
+  hoveredPage: number | null = null;
+  clickedPage: number | null = null;
+  
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   changePage(page: number): void {
     this.currentPage = page;
@@ -139,6 +142,4 @@ export class RoomsComponent implements OnInit{
       this.currentPage++;
     }
   }
-
-
 }
