@@ -1,24 +1,24 @@
 <!-- The following HTML represents a card displaying a video room -->
 
 <!-- Start of the card container -->
-<div class="container mt-4 border p-3 rounded-3">
+<div class="container mt-4">
     <!-- Row for card content -->
     <div class="row">
         <!-- Column for video player and details -->
         <div class="col-lg-8">
             <!-- Card with video player and details -->
-            <div class="card border-0 border-bottom border-top p-2">
+            <div class="card mb-2 border shadow p-2">
                 <!-- Video player container with relative positioning -->
                 <div class="position-relative" style="height: 300px;">
                     <!-- Video player element -->
                     <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
-                        class="img-fluid w-100 h-100" controls autoplay loop muted></video>
+                        class="img-fluid rounded-2 w-100 h-100" controls loop muted></video>
                     <!-- Optional video controls if necessary -->
 
                     <!-- Position the first icon at the top-left corner -->
                     <div class="position-absolute top-0 start-0">
                         <p class="border px-3 py-1 bg-danger text-white rounded border-0">live</p>
-                    </div>            
+                    </div>
                 </div>
 
                 <!-- Details section -->
@@ -58,13 +58,156 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Other cards -->
+            <!-- Users section -->
+            <div class="card shadow p-2">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-center align-items-center gap-2">
+                        <div>
+                            <img src="http://admin.gypsyworld.de:8096/assets/user2.a4192dd6.png" alt="Admin"
+                                class="img-fluid rounded-circle" width="40px">
+                        </div>
+                        <div class="">
+                            <h5>Benny Chagur</h5>
+                            <p>ID: 12346</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between gap-3 align-items-center">
+                        <button class="btn btn-dark">View profile</button>
+                        <button class="btn btn-warning">Warn</button>
+                        <button class="btn btn-dark">Block</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total gift section -->
+            <div class="card mt-2 shadow">
+                <div>
+                    <!-- Add the necessary Bootstrap CSS link in your HTML file, if not already included -->
+                    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+
+                    <!-- Create a div container for the scrollable table -->
+                    <div class="container mt-4">
+                     
+                        <div class="table-responsive">
+                            <!-- Table for gift transactions -->
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Gift transactions</th>
+                                        <th>Transactions by</th>
+                                        <th>Gift name</th>
+                                        <th>Gift image</th>
+                                        <th>Gift value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Sample data rows -->
+                                    <tr>
+                                        <td>
+                                            <h5>Received</h5>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex justify-content-center align-items-center gap-2">
+                                                <div>
+                                                    <img src="http://admin.gypsyworld.de:8096/assets/user2.a4192dd6.png"
+                                                        alt="Admin" class="img-fluid rounded-circle" width="40px">
+                                                </div>
+                                                <div class="">
+                                                    <h5>Benny Chagur</h5>
+                                                    <p>ID: 12346</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Messages</td>
+                                        <td>
+                                            <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <div class="d-flex  gap-2 align-items-center">
+                                                    <p><i class="fa fa-circle" aria-hidden="true"></i></p>
+                                                    <p>60</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5>Received</h5>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex justify-content-center align-items-center gap-2">
+                                                <div>
+                                                    <img src="http://admin.gypsyworld.de:8096/assets/user2.a4192dd6.png"
+                                                        alt="Admin" class="img-fluid rounded-circle" width="40px">
+                                                </div>
+                                                <div class="">
+                                                    <h5>Benny Chagur</h5>
+                                                    <p>ID: 12346</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Messages</td>
+                                        <td>
+                                            <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <div class="d-flex  gap-2 align-items-center">
+                                                    <p><i class="fa fa-circle" aria-hidden="true"></i></p>
+                                                    <p>60</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5>Received</h5>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex justify-content-center align-items-center gap-2">
+                                                <div>
+                                                    <img src="http://admin.gypsyworld.de:8096/assets/user2.a4192dd6.png"
+                                                        alt="Admin" class="img-fluid rounded-circle" width="40px">
+                                                </div>
+                                                <div class="">
+                                                    <h5>Benny Chagur</h5>
+                                                    <p>ID: 12346</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Messages</td>
+                                        <td>
+                                            <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <div class="d-flex  gap-2 align-items-center">
+                                                    <p><i class="fa fa-circle" aria-hidden="true"></i></p>
+                                                    <p>60</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- Add more rows here if you have more data -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Column for additional content -->
         <div class="col-lg-4">
-            col-4 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio ducimus voluptatibus culpa rem voluptates
+            col-4 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio ducimus voluptatibus culpa rem
+            voluptates
             eveniet corporis reiciendis nihil expedita nostrum porro dolore blanditiis officia, totam velit. Non nobis
-            perferendis ullam debitis atque et, unde omnis. Rerum adipisci eum vero? Sunt aspernatur incidunt soluta alias
+            perferendis ullam debitis atque et, unde omnis. Rerum adipisci eum vero? Sunt aspernatur incidunt soluta
+            alias
             impedit accusantium id repellat sed mollitia.
         </div>
     </div>
