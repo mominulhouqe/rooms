@@ -1,4 +1,5 @@
 import { Component ,OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-rooms',
@@ -123,7 +124,7 @@ export class RoomsComponent implements OnInit{
   hoveredPage: number | null = null;
   clickedPage: number | null = null;
   
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -142,4 +143,8 @@ export class RoomsComponent implements OnInit{
       this.currentPage++;
     }
   }
+
+ 
+
+
 }

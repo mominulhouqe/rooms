@@ -1,57 +1,72 @@
-<p>all-rooms works!</p>
+<!-- The following HTML represents a card displaying a video room -->
 
+<!-- Start of the card container -->
+<div class="container mt-4 border p-3 rounded-3">
+    <!-- Row for card content -->
+    <div class="row">
+        <!-- Column for video player and details -->
+        <div class="col-lg-8">
+            <!-- Card with video player and details -->
+            <div class="card border-0 border-bottom border-top p-2">
+                <!-- Video player container with relative positioning -->
+                <div class="position-relative" style="height: 300px;">
+                    <!-- Video player element -->
+                    <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+                        class="img-fluid w-100 h-100" controls autoplay loop muted></video>
+                    <!-- Optional video controls if necessary -->
 
+                    <!-- Position the first icon at the top-left corner -->
+                    <div class="position-absolute top-0 start-0">
+                        <p class="border px-3 py-1 bg-danger text-white rounded border-0">live</p>
+                    </div>            
+                </div>
 
-<div>
-
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-8">
-                <div class="card text-center border-0 border-bottom border-top p-2">
-
-                    <div class="position-relative " style="height: 200px;">
-                    
-                            <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" class="img-fluid w-100 h-100" controls autoplay loop muted></video>
-                            <!-- Add any video controls if necessary -->
-                            
-                          
-
-                        <div class="position-absolute top-0 start-0 p-2">
-                            <!-- <i class="{{ card.icon2 }} fa-1x"></i> -->
-                        <i class="fa fa-viadeo fa-3x bg-white" aria-hidden="true"></i>
-                            >
-                        </div>
-                        <div class="position-absolute top-50 start-50 translate-middle">
-                            <i class=" fa-3x"></i>
-                        </div>
-                        <div class="position-absolute bottom-0 end-0 p-2">
-                            <!-- <i class="{{ card.icon }} fa-1x"></i> -->
-                        </div>
+                <!-- Details section -->
+                <div class="d-flex justify-content-between mt-3">
+                    <div>
+                        <!-- Room title -->
+                        <p>Music fest 2023..</p>
+                        <!-- Room date and time -->
+                        <p class="text-muted">13/07/2023 <span>6:47 PM</span></p>
                     </div>
 
-        
-                    <div class="d-flex justify-content-between m-2">
-                        <p class="border-0 bg-light p-2 rounded me-2">
-                            <i class="fa fa-bug" aria-hidden="true"></i> Reports ()
-                        </p>
-        
-                        <div class="d-flex gap-2">
-                            <p class="border-0 bg-light p-2 rounded me-2 me-2 text-danger">End Room</p>
-                            <button class="btn btn-dark me-2">View Room</button>
+                    <!-- Featured and View Room options -->
+                    <div class="d-flex justify-content-center align-items-center gap-2">
+                        <div>
+                            <p>Featured on home</p>
+                            <p class="border bg-warning rounded-3 d-flex justify-content-center gap-2">None <i
+                                    class="fa fa-sort-down" aria-hidden="true"></i> </p>
+                        </div>
+                        <div>
+                            <p class="btn btn-dark">View Room</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Participants and Capacity information -->
+                <div class="d-flex justify-content-between gap-2 align-items-center">
+                    <!-- Participants count -->
+                    <div class="d-flex justify-content-between gap-2 align-items-center">
+                        <p><i class="fa fa-eye" aria-hidden="true"></i></p>
+                        <p>450 join</p>
+                    </div>
 
+                    <!-- Capacity status -->
+                    <div class="d-flex justify-content-between gap-2 align-items-center">
+                        <p><i class="fa fa-circle" aria-hidden="true"></i></p>
+                        <p>40/100</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-4">col-4</div>
+        </div>
+
+        <!-- Column for additional content -->
+        <div class="col-lg-4">
+            col-4 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio ducimus voluptatibus culpa rem voluptates
+            eveniet corporis reiciendis nihil expedita nostrum porro dolore blanditiis officia, totam velit. Non nobis
+            perferendis ullam debitis atque et, unde omnis. Rerum adipisci eum vero? Sunt aspernatur incidunt soluta alias
+            impedit accusantium id repellat sed mollitia.
         </div>
     </div>
-
-
-
-
-
 </div>
+<!-- End of the card container -->
