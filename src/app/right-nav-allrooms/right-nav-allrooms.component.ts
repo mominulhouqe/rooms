@@ -23,6 +23,26 @@ export class RightNavAllroomsComponent {
       photo: 'http://admin.gypsyworld.de:8096/assets/user2.a4192dd6.png',
     },
   ]
+  liveRooms=[
+    {
+      name:'Music fest 2023',
+      reports:'34',
+      views:'564',
+      photo:'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'
+    },
+    {
+      name:'Tu meri.. ',
+      reports:'34',
+      views:'564',
+      photo:'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'
+    },
+    {
+      name:'Rooks',
+      reports:'74',
+      views:'56564',
+      photo:'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'
+    },
+  ]
 
 
 }
