@@ -6,50 +6,29 @@
         <h5 class="mt-3 fw-bold mb-4 ms-2"> Reports (5)</h5>
         <div class="border-0 border-bottom border-top p-2">
             <!-- Comment: User information section -->
-            <div class="d-flex justify-content-between reports align-items-center">
+            <div *ngFor="let report of reports" class="d-flex justify-content-between reports align-items-center">
                 <div class="d-flex align-items-center justify-content-center gap-3">
                     <!-- Comment: User profile image -->
                     <div>
-                        <img src="http://admin.gypsyworld.de:8096/assets/user2.a4192dd6.png" alt="Admin"
+                        <img src="{{report.photo}}" alt="Admin"
                             class="img-fluid rounded-circle" width="50px" height="50px">
                     </div>
                     <div class="">
                         <!-- Comment: User details -->
-                        <p class="fw-bold mb-0">Benny Chagur</p>
-                        <p class="text-muted">ID: 12346</p>
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p class="fw-bold mb-0">{{report.name}} </p>
+                        <p class="text-muted">ID: {{report.userId}} </p>
+                        <p>{{report.description}} </p>
                     </div>
                     <!-- Comment: Empty div, can be used for additional content if needed -->
                     <div></div>
                     <div class="d-flex justify-content-end gap-3 align-items-center ">
                         <!-- Comment: Time ago -->
-                        <p class="text-muted">7 min ago</p>
+                        <p class="text-muted">{{report.time}}  min ago</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="border-0 border-bottom p-2">
-            <!-- Comment: Another section with similar user information -->
-            <div class="d-flex reports justify-content-between align-items-center">
-                <div class="d-flex align-items-center justify-content-center gap-3">
-                    <!-- Comment: User profile image -->
-                    <div>
-                        <img src="http://admin.gypsyworld.de:8096/assets/user2.a4192dd6.png" alt="Admin"
-                            class="img-fluid rounded-circle" width="50px" height="50px">
-                    </div>
-                    <div class="">
-                        <!-- Comment: User details -->
-                        <p class="fw-bold mb-0">Benny Chagur</p>
-                        <p class="text-muted">ID: 12346</p>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between gap-3 align-items-center">
-                    <!-- Comment: Time ago -->
-                    <p class="text-muted">7 min ago</p>
-                </div>
-            </div>
-        </div>
+       
         <div>
             <p class="text-center text-primary mt-2 fw-bold">See more..</p>
         </div>

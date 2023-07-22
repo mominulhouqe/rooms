@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class RightNavAllroomsComponent {
 
+  reports=[
+    {
+      userId: '123',
+      name: 'Benny Changur',
+      time: '4',
+      description:'This video is danger.Please remove this.',
+      photo: 'http://admin.gypsyworld.de:8096/assets/user2.a4192dd6.png',
+    },
+    {
+      userId: '54123',
+      name: 'Jon Due',
+      time: '4',
+      description:'This video is danger.Please remove this.It is violeted videos',
+      photo: 'http://admin.gypsyworld.de:8096/assets/user2.a4192dd6.png',
+    },
+  ]
+
+
 }
