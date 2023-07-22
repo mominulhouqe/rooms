@@ -8,3 +8,32 @@
     color: white;
 
 }
+
+.red{
+    border-radius: 4px;
+    background-color: #f25037;
+}
+.yellow{
+    border-radius: 4px;
+    background-color: #FFC044;
+}
+.green{
+    border-radius: 4px;
+    background-color: #468276;
+}
+
+.primary-font{
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    font-family:  Roboto;
+}
+.endroom{
+    color: #f25037;
+    font-size: 14px;
+    font-weight: 500;
+}
+.report{   
+    font-size: 14px;
+    font-weight: 500;
+}

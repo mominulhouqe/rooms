@@ -1,33 +1,38 @@
 <!-- Live stats cards -->
 <div class="container mx-auto mt-2">
-    <!-- First card -->
+    <!-- First card - Live video count -->
     <div class="row justify-content-center">
         <div class="col-md-4">
-            <div class="card bg-danger p-3 text-white text-center">
+            <div class="card red p-3 text-white text-center">
                 <div class="d-flex gap-3 align-items-center mx-2">
-                    <i class="fa fa-video-camera fa-1x"></i>
-                    <h6>Live</h6>
+                    <p>
+                        <i class="fa fa-video-camera fa-1x"></i>
+                    </p>
+                    <p class="primary-font">Live</p>
                 </div>
                 <h4>350</h4>
             </div>
         </div>
-        <!-- Second card -->
+
+        <!-- Second card - Multi-guest live video count -->
         <div class="col-md-4">
-            <div class="card bg-warning p-3 text-white text-center">
+            <div class="card yellow p-3 text-white text-center">
                 <div class="d-flex gap-3 align-items-center mx-2">
-                    <i class="fa fa-video-camera fa-1x"></i>
-                    <h6>Multi-guest live</h6>
+                    <p><i class="fa fa-video-camera fa-1x"></i></p>
+                    <p class="primary-font">Multi-guest live</p>
                 </div>
                 <h4>125</h4>
             </div>
         </div>
 
-        <!-- Third card -->
+        <!-- Third card - Audio Live count -->
         <div class="col-md-4">
-            <div class="card bg-success p-3 text-white text-center">
-                <div class="d-flex gap-3 align-items-center mx-2">
-                    <i class="fa fa-microphone" aria-hidden="true"></i>
-                    <h6>Audio Live</h6>
+            <div class="card green p-3 text-white text-center">
+                <div class="d-flex gap-3 justify-content-start align-items-center mx-2">
+                    <p>
+                        <i class="fa fa-microphone" aria-hidden="true"></i>
+                    </p>
+                    <p class="primary-font">Audio Live</p>
                 </div>
                 <h4>200</h4>
             </div>
@@ -41,6 +46,7 @@
         <!-- Loop through the displayedCards array -->
         <div *ngFor="let card of displayedCards" class="col-md-4 mb-4 p-2">
             <div class="card text-center border-0 border-bottom border-top p-2">
+                <!-- Video thumbnail and icons -->
                 <div class="position-relative " style="height: 200px;">
                     <img src="{{ card.imageUrl }}" alt="Card Background" class="img-fluid w-100 h-100">
                     <div class="position-absolute top-0 start-0 p-2">
@@ -54,14 +60,21 @@
                     </div>
                 </div>
 
+                <!-- Video details and actions -->
                 <div class="d-flex justify-content-between m-2">
-                    <p class="border-0 bg-light p-2 rounded me-2">
-                        <i class="fa fa-bug" aria-hidden="true"></i> Reports ({{ card.count }})
-                    </p>
+                    <!-- Reports count -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class=" p-2 rounded me-2">
+                            <i class="fa fa-bug" aria-hidden="true"></i> 
+                        </p>
+                        <p class="report">
+                            Reports ()
+                        </p>            
+                    </div>
 
+                    <!-- Room actions -->
                     <div class="d-flex  align-items-center justify-content-center gap-2">
-                        <p class="border-0 bg-light p-2 rounded me-2 me-2 text-danger">End Room</p>
-                   
+                        <p class="border-0  p-2 rounded me-2 me-2 endroom">End Room</p>
                         <button routerLink="/another-page" class="btn btn-dark me-2">View Room</button>
                     </div>
                 </div>
@@ -69,18 +82,15 @@
         </div>
     </div>
 
-
-
     <!-- Pagination -->
     <nav aria-label="Card Pagination">
         <ul class="pagination justify-content-end">
             <!-- Loop through the pagesArray -->
-            <li class="page-item p-2 bg-light" *ngFor="let page of pagesArray">
+            <li class="page-item p-1 bg-light" *ngFor="let page of pagesArray">
                 <!-- Use ngClass to conditionally set the background color -->
-                <button class="btn border btn-hover btn-white m-1" (click)="changePage(page)"
+                <button class="btn border btn-hover btn-white " (click)="changePage(page)"
                     [ngClass]="{ 'white-background': currentPage === page }">{{ page }}</button>
             </li>
         </ul>
     </nav>
-
 </div>
