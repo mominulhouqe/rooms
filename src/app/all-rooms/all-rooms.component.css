@@ -32,3 +32,12 @@
     color: #F25037;
     font-weight: 500;
   }
+
+  .delete-icon {
+    display: none;
+  }
+
+  /* On hover, display the delete icon */
+  .icon:hover .delete-icon {
+    display: inline-block;
+  }
