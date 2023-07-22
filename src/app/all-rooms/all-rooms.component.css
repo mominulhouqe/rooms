@@ -1,3 +1,6 @@
+.container{
+  font-family: roboto;
+}
 /* Center the video inside the card */
 .card video {
     object-fit: fill;
@@ -13,3 +16,19 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
   }
   
+  .endroom{
+    background-color: #F25037;
+    color: white;
+    border-radius: 4px;
+  }
+  .text-muted{
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 14px;
+    font-weight: 400px;
+    font-family: roboto;
+  }
+  .block{
+    background-color: rgba(242, 80, 55, 0.16);
+    color: #F25037;
+    font-weight: 500;
+  }
