@@ -13,93 +13,84 @@ export class RoomsComponent implements OnInit{
   cards = [
     {
       imageUrl: 'https://via.placeholder.com/300',
-      icon: 'fas fa-video-camera',
+      icon1: 'fa fa-star',
       icon2: 'fas fa-video-camera',
-      count: 350,
-      buttonIcon1: 'fas fa-play',
-      buttonText1: 'Play',
-      buttonIcon2: 'fas fa-pause',
-      buttonText2: 'Pause'
+      icon3: 'fa fa-eye',
+      views1: 350,
+      views2: 50,
+  
     },
     {
       imageUrl: 'https://via.placeholder.com/300',
-      icon: 'fas fa-video-camera',
+      icon1: 'fa fa-star',
       icon2: 'fas fa-video-camera',
-      count: 350,
-      buttonIcon1: 'fas fa-play',
-      buttonText1: 'Play',
-      buttonIcon2: 'fas fa-pause',
-      buttonText2: 'Pause'
+      icon3: 'fa fa-eye',
+      views1: 350,
+      views2: 50,
+  
     },
     {
       imageUrl: 'https://via.placeholder.com/300',
-      icon: 'fas fa-video-camera',
+      icon1: 'fa fa-star',
       icon2: 'fas fa-video-camera',
-      count: 350,
-      buttonIcon1: 'fas fa-play',
-      buttonText1: 'Play',
-      buttonIcon2: 'fas fa-pause',
-      buttonText2: 'Pause'
+      icon3: 'fa fa-eye',
+      views1: 350,
+      views2: 50,
+  
     },
     {
       imageUrl: 'https://via.placeholder.com/300',
-      icon: 'fas fa-video-camera',
+      icon1: 'fa fa-star',
       icon2: 'fas fa-video-camera',
-      count: 350,
-      buttonIcon1: 'fas fa-play',
-      buttonText1: 'Play',
-      buttonIcon2: 'fas fa-pause',
-      buttonText2: 'Pause'
+      icon3: 'fa fa-eye',
+      views1: 350,
+      views2: 50,
+  
     },
     {
       imageUrl: 'https://via.placeholder.com/300',
-      icon: 'fas fa-video-camera',
+      icon1: 'fa fa-star',
       icon2: 'fas fa-video-camera',
-      count: 350,
-      buttonIcon1: 'fas fa-play',
-      buttonText1: 'Play',
-      buttonIcon2: 'fas fa-pause',
-      buttonText2: 'Pause'
+      icon3: 'fa fa-eye',
+      views1: 350,
+      views2: 50,
+  
     },
     {
       imageUrl: 'https://via.placeholder.com/300',
-      icon: 'fas fa-video-camera',
+      icon1: 'fa fa-star',
       icon2: 'fas fa-video-camera',
-      count: 350,
-      buttonIcon1: 'fas fa-play',
-      buttonText1: 'Play',
-      buttonIcon2: 'fas fa-pause',
-      buttonText2: 'Pause'
+      icon3: 'fa fa-eye',
+      views1: 350,
+      views2: 50,
+  
     },
     {
       imageUrl: 'https://via.placeholder.com/300',
-      icon: 'fas fa-video-camera',
+      icon1: 'fa fa-star',
       icon2: 'fas fa-video-camera',
-      count: 350,
-      buttonIcon1: 'fas fa-play',
-      buttonText1: 'Play',
-      buttonIcon2: 'fas fa-pause',
-      buttonText2: 'Pause'
+      icon3: 'fa fa-eye',
+      views1: 350,
+      views2: 50,
+  
     },
     {
       imageUrl: 'https://via.placeholder.com/300',
-      icon: 'fas fa-video-camera',
+      icon1: 'fa fa-star',
       icon2: 'fas fa-video-camera',
-      count: 350,
-      buttonIcon1: 'fas fa-play',
-      buttonText1: 'Play',
-      buttonIcon2: 'fas fa-pause',
-      buttonText2: 'Pause'
+      icon3: 'fa fa-eye',
+      views1: 350,
+      views2: 50,
+  
     },
     {
       imageUrl: 'https://via.placeholder.com/300',
-      icon: 'fas fa-video-camera',
+      icon1: 'fa fa-star',
       icon2: 'fas fa-video-camera',
-      count: 350,
-      buttonIcon1: 'fas fa-play',
-      buttonText1: 'Play',
-      buttonIcon2: 'fas fa-pause',
-      buttonText2: 'Pause'
+      icon3: 'fa fa-eye',
+      views1: 350,
+      views2: 50,
+  
     },
     // Add more card data here for a total of 6 cards
   ];

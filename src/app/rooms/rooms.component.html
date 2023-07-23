@@ -1,40 +1,45 @@
 <!-- Live stats cards -->
-<div class="container mx-auto mt-2">
+<div class="container mx-auto mt-4">
     <!-- First card - Live video count -->
     <div class="row justify-content-center">
         <div class="col-md-4">
-            <div class="card red p-3 text-white text-center">
-                <div class="d-flex gap-3 align-items-center mx-2">
-                    <p>
-                        <i class="fa fa-video-camera fa-1x"></i>
-                    </p>
+            <div class="card border-0 red p-1 text-white ">
+                <div class="mx-2 d-flex gap-3">
+                    <p><i class="fa fa-video-camera fa-1x"></i></p>
+                   <div>
                     <p class="primary-font">Live</p>
+                    <h4>350</h4>
+                   </div>
                 </div>
-                <h4>350</h4>
+              
             </div>
         </div>
 
         <!-- Second card - Multi-guest live video count -->
         <div class="col-md-4">
-            <div class="card yellow p-3 text-white text-center">
-                <div class="d-flex gap-3 align-items-center mx-2">
+            <div class="card yellow p-1 border-0 text-white ">
+            
+                <div class="mx-2 d-flex gap-3">
                     <p><i class="fa fa-video-camera fa-1x"></i></p>
+                   <div>
                     <p class="primary-font">Multi-guest live</p>
+                    <h4>450</h4>
+                   </div>
                 </div>
-                <h4>125</h4>
             </div>
         </div>
 
         <!-- Third card - Audio Live count -->
         <div class="col-md-4">
-            <div class="card green p-3 text-white text-center">
-                <div class="d-flex gap-3 justify-content-start align-items-center mx-2">
-                    <p>
-                        <i class="fa fa-microphone" aria-hidden="true"></i>
-                    </p>
+            <div class="card green border-0 p-1 text-white ">
+               
+                <div class="mx-2 d-flex gap-3">
+                    <p> <i class="fa fa-microphone" aria-hidden="true"></i></p>
+                   <div>
                     <p class="primary-font">Audio Live</p>
+                    <h4>200</h4>
+                   </div>
                 </div>
-                <h4>200</h4>
             </div>
         </div>
     </div>
@@ -45,18 +50,19 @@
     <div class="row justify-content-center">
         <!-- Loop through the displayedCards array -->
         <div *ngFor="let card of displayedCards" class="col-md-4 mb-4 p-2">
-            <div class="card text-center border-0 border-bottom border-top p-2">
+            <div class="card text-center border-0 border-bottom border-top ">
                 <!-- Video thumbnail and icons -->
-                <div class="position-relative " style="height: 200px;">
-                    <img src="{{ card.imageUrl }}" alt="Card Background" class="img-fluid w-100 h-100">
-                    <div class="position-absolute top-0 start-0 p-2">
-                        <i class="{{ card.icon2 }} fa-1x"></i>
+                <div class="position-relative my-3" style="height: 200px;">
+                    <img src="{{ card.imageUrl }}" alt="Card Background" class="img-fluid w-100 h-100 rounded-2">
+                    <div class="position-absolute fw-bold top-0 start-0 p-2 text-white">
+                        <i class="{{ card.icon1 }} fa-1x me-2"></i>{{card.views1}}
                     </div>
-                    <div class="position-absolute top-50 start-50 translate-middle">
-                        <i class="{{ card.icon }} fa-3x"></i>
+                    <div class="position-absolute fw-bold top-50 start-50 translate-middle">
+                        <i class="{{ card.icon2 }} fa-3x"></i>
                     </div>
-                    <div class="position-absolute bottom-0 end-0 p-2">
-                        <i class="{{ card.icon }} fa-1x"></i>
+                    <div class="position-absolute fw-bold bottom-0 end-0 p-2 text-white">
+                        <i class="{{ card.icon3 }} fa-1x me-2"></i>{{card.views2}}
+                      
                     </div>
                 </div>
 
