@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { RoomsComponent } from './rooms/rooms.component';
 import { AllRoomsComponent } from './all-rooms/all-rooms.component';
 import { RightNavAllroomsComponent } from './right-nav-allrooms/right-nav-allrooms.component';
+import { LeftSidebarComponent } from './left-sidebar/left-sidebar.component';
 
 
 @NgModule({
-  declarations: [AppComponent, RoomsComponent, AllRoomsComponent, RightNavAllroomsComponent],
+  declarations: [AppComponent, RoomsComponent, AllRoomsComponent, RightNavAllroomsComponent, LeftSidebarComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

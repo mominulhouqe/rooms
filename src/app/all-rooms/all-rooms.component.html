@@ -1,13 +1,13 @@
 <!-- The following HTML represents a card displaying a video room -->
 
 <!-- Start of the card container -->
-<div class="container mt-4 ">
+<div class=" mt-4 ">
     <nav class="navbar mb-4 navbar-light">
         <div class="container-fluid">
 
             <p><a routerLink="/home"> <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> </a></p>
 
-            <form class="d-flex justify-content-center bg-light gap-2 rounded p-1 align-items-center">
+            <form class="d-flex bd-highlight justify-content-center bg-light gap-2 rounded p-1 align-items-center">
                 <span><i class="fa fa-search fa-xl" aria-hidden="true"></i> </span>
                 <input class="form-control p-2 border-0" type="search" placeholder="Search" aria-label="Search">
             </form>
@@ -15,9 +15,9 @@
     </nav>
 
     <!-- Row for card content -->
-    <div class="row mb-2">
+    <div class="row d-flex flex-lg-row flex-sm-row mb-2">
         <!-- Column for video player and details -->
-        <div class="col-lg-8">
+        <div class="col-lg-8 ">
             <!-- Card with video player and details -->
             <div class="card mb-2 border shadow p-2">
                 <!-- Video player container with relative positioning -->
@@ -190,7 +190,6 @@
                             <i class="fa fa-trash text-danger" aria-hidden="true"></i>
                         </div>
                     </div>
-
                     <!-- Second Chat -->
                     <div class="d-flex align-items-center icon gap-3">
                         <img src="http://admin.gypsyworld.de:8096/assets/user2.a4192dd6.png" alt="User Avatar"
@@ -214,7 +213,7 @@
         </div>
 
         <!-- Column for additional content -->
-        <div class="col-lg-4">
+        <div class="col-lg-4 ">
             <app-right-nav-allrooms></app-right-nav-allrooms>
         </div>
     </div>
