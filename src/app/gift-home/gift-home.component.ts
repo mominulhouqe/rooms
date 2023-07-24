@@ -160,13 +160,42 @@ export class GiftHomeComponent {
 
     // Add more gifts for different categories
   ];
-
   searchTerm: string = '';
   selectedCategoryGifts: any[] = [];
+  newGift: any = { name: '', category: '', imageUrl: '' };
 
-  changeCategory(category: string) {
-    this.selectedCategory = category;
+  addNewGift() {
+    if (
+      this.newGift.name.trim() === '' ||
+      this.newGift.category.trim() === '' ||
+      this.newGift.imageUrl.trim() === ''
+    ) {
+      return;
+    }
+
+    const gift: any = {
+      id: Date.now(),
+      name: this.newGift.name,
+      category: this.newGift.category,
+      imageUrl: this.newGift.imageUrl,
+      value: '',
+    };
+
+    this.giftsAll.push(gift);
     this.filterGiftsByCategory();
+    this.resetNewGiftForm();
+    this.closeAddGiftModal();
+  }
+
+  resetNewGiftForm() {
+    this.newGift = { name: '', category: '', imageUrl: '' };
+  }
+
+  closeAddGiftModal() {
+    const modalElement: any = document.getElementById('addGiftModal');
+    modalElement?.classList.remove('show');
+    modalElement?.setAttribute('aria-hidden', 'true');
+    modalElement?.setAttribute('style', 'display: none;');
   }
 
   searchGifts() {
@@ -197,5 +226,9 @@ export class GiftHomeComponent {
           gift.value.toLowerCase().includes(searchTermLower)
       );
     }
+  }
+  changeCategory(category: string) {
+    this.selectedCategory = category;
+    this.filterGiftsByCategory();
   }
 }

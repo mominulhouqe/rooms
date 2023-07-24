@@ -17,12 +17,57 @@
                 </a>
                 <!-- Button to Add New Gift -->
                 <div class="btn btn-dark">
-                    <i class="fa fa-gift" aria-hidden="true"></i> Add new gift
+                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addGiftModal">
+                        Add new gift
+                    </button>
                 </div>
             </div>
 
         </div>
     </nav>
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+<!-- Modal for adding a new gift -->
+<div class="modal fade" id="addGiftModal" tabindex="-1" aria-labelledby="addGiftModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addGiftModalLabel">Add New Gift</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form (submit)="addNewGift()">
+            <div class="mb-3">
+              <label for="giftName" class="form-label">Gift Name</label>
+              <input type="text" class="form-control" id="giftName" required [(ngModel)]="newGift.name">
+            </div>
+            <div class="mb-3">
+              <label for="giftCategory" class="form-label">Gift Category</label>
+              <select class="form-select" id="giftCategory" required [(ngModel)]="newGift.category">
+                <option *ngFor="let category of categories">{{ category }}</option>
+              </select>
+            </div>
+            <!-- <div class="mb-3">
+              <label for="giftImage" class="form-label"></label>
+              <input type="text" class="form-control" id="giftImage" required [(ngModel)]="newGift.imageUrl">
+            </div> -->
+            <div class="mb-3">
+                <label for="giftImage" class="form-label" >Gift Image URL</label>
+                <input class="form-control" type="file" id="giftImage" multiple required [(ngModel)]="newGift.imageUrl">
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="addNewGift()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
     <!-- Categories Navigation -->
     <div class="mb-2 categories-nav">
