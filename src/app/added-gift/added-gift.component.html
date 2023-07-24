@@ -1,0 +1,42 @@
+<div class="container mt-4">
+
+    <!-- Back to Gift List button -->
+    <p routerLink="/gift-home" class="btn mb-4 "><i class="fa fa-backward" aria-hidden="true"></i> Gift List</p>
+  
+    <div class="row ">
+      <div class="col-8">
+  
+        <!-- Add new category section -->
+        <h3>Add new category </h3>
+        <div class="input-group mb-3">
+          <!-- Input field to enter new category name -->
+          <input type="text" class="form-control" [(ngModel)]="newGift" placeholder="Category name...">
+        </div>
+        <div class="input-group-append d-flex justify-content-end">
+          <!-- Button to add new category -->
+          <button class="btn btn-dark" type="button" (click)="addGift()">Add</button>
+        </div>
+  
+      </div>
+  
+      <div class="col-4 border p-2 rounded-2">
+        <!-- All categories section -->
+        <div class=" ">
+          <h4>All category (4)</h4>
+          <!-- Display all categories with delete buttons -->
+          <p class=" d-flex justify-content-between mb-4 showdeleted" *ngFor="let gift of gifts">
+            {{ gift.name }}
+            <button class="btn btn-danger  btn-sm float-right" (click)="deleteGift(gift)"><i class="fa fa-remove " aria-hidden="true"></i> </button>
+          </p>
+        </div>
+  
+        <!-- Toast notification for gift deletion -->
+        <div #toast class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true">
+          <div class="toast-body">
+            Gift deleted!
+          </div>
+        </div>
+  
+      </div>
+    </div>
+</div>
