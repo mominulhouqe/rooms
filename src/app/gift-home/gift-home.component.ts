@@ -164,27 +164,47 @@ export class GiftHomeComponent {
   selectedCategoryGifts: any[] = [];
   newGift: any = { name: '', category: '', imageUrl: '' };
 
-  addNewGift() {
+  imagePreview: string | undefined;
+
+  
+  saveGift() {
+    console.log("Add New Gift function called.");
+  
     if (
       this.newGift.name.trim() === '' ||
       this.newGift.category.trim() === '' ||
       this.newGift.imageUrl.trim() === ''
     ) {
+      console.log("Validation failed. Gift not added.");
       return;
     }
-
+  
     const gift: any = {
       id: Date.now(),
       name: this.newGift.name,
       category: this.newGift.category,
-      imageUrl: this.newGift.imageUrl,
+      imageUrl: this.imagePreview,
       value: '',
     };
-
+  
     this.giftsAll.push(gift);
+    console.log("New gift added:", gift);
+    
     this.filterGiftsByCategory();
     this.resetNewGiftForm();
     this.closeAddGiftModal();
+    console.log("Gifts after adding:", this.giftsAll);
+  }
+  
+  handleImageUpload(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.imagePreview = reader.result as string;
+      };
+      reader.readAsDataURL(file);
+    }
   }
 
   resetNewGiftForm() {

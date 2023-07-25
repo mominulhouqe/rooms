@@ -1,108 +1,119 @@
 <div class="container">
 
-    <!-- Navigation Bar -->
-    <nav class="navbar mb-4 navbar-light">
-        <div class="container-fluid">
-            <div></div>
-            <!-- Search Bar -->
-            <div class="d-flex justify-content-end gap-2 rounded p-1 align-items-center ">
-                <form class="d-flex justify-content-center bg-light gap-2 rounded p-1 align-items-center">
-                    <span><i class="fa fa-search fa-xl" aria-hidden="true"></i> </span>
-                    <input class="form-control p-2 border-0" type="search" placeholder="Search" aria-label="Search">
-                </form>
+  <!-- Navigation Bar -->
+  <nav class="navbar mb-4 navbar-light">
+    <div class="container-fluid">
+      <div></div>
+      <!-- Search Bar -->
+      <div class="d-flex justify-content-end gap-2 rounded p-1 align-items-center ">
+        <form class="d-flex justify-content-center bg-light gap-2 rounded p-1 align-items-center">
+          <span><i class="fa fa-search fa-xl" aria-hidden="true"></i> </span>
+          <input class="form-control p-2 border-0" type="search" placeholder="Search" aria-label="Search">
+        </form>
 
-                <!-- Button to Manage Categories -->
-                <a routerLink="/addgift" class="btn btn-outline-dark border ">
-                    Manage Category
-                </a>
-                <!-- Button to Add New Gift -->
-                <div class="btn btn-dark">
-                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addGiftModal">
-                        Add new gift
-                    </button>
-                </div>
-            </div>
+        <!-- Button to Manage Categories -->
+        <a routerLink="/addgift" class="btn btn-outline-dark border ">
+          Manage Category
+        </a>
+        <!-- Button to Add New Gift -->
+        <div class="">
+          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Add a new gift
+          </button>
 
         </div>
-    </nav>
+      </div>
 
-    <!-- Button trigger modal -->
+    </div>
+  </nav>
 
+  <!-- Button trigger modal -->
 
-    <!-- Modal -->
-<!-- Modal for adding a new gift -->
-<div class="modal fade" id="addGiftModal" tabindex="-1" aria-labelledby="addGiftModalLabel" aria-hidden="true">
+  <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="addGiftModalLabel">Add New Gift</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Add New Gift</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form (submit)="addNewGift()">
+          <form (submit)="saveGift()">
+            <!-- Gift Name -->
             <div class="mb-3">
               <label for="giftName" class="form-label">Gift Name</label>
-              <input type="text" class="form-control" id="giftName" required [(ngModel)]="newGift.name">
+              <input type="text" class="form-control" id="giftName" [(ngModel)]="newGift.name" name="giftName" required>
             </div>
+
+            <!-- Gift Image URL -->
+            <div class="mb-3">
+              <label for="giftImageUrl" class="form-label">Gift Image URL</label>
+              <input type="file" class="form-control" id="giftImageUrl" [(ngModel)]="newGift.imageUrl"
+                name="giftImageUrl" required>
+            </div>
+
+            <!-- Gift Category -->
             <div class="mb-3">
               <label for="giftCategory" class="form-label">Gift Category</label>
-              <select class="form-select" id="giftCategory" required [(ngModel)]="newGift.category">
+              <select class="form-select" id="giftCategory" [(ngModel)]="newGift.category" name="giftCategory" required>
                 <option *ngFor="let category of categories">{{ category }}</option>
               </select>
             </div>
-            <!-- <div class="mb-3">
-              <label for="giftImage" class="form-label"></label>
-              <input type="text" class="form-control" id="giftImage" required [(ngModel)]="newGift.imageUrl">
-            </div> -->
-            <div class="mb-3">
-                <label for="giftImage" class="form-label" >Gift Image URL</label>
-                <input class="form-control" type="file" id="giftImage" multiple required [(ngModel)]="newGift.imageUrl">
-              </div>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" (click)="addNewGift()">Save</button>
+          <button type="button" class="btn btn-primary" (click)="saveGift()">Save Gift</button>
         </div>
       </div>
     </div>
   </div>
 
 
-    <!-- Categories Navigation -->
-    <div class="mb-2 categories-nav">
-        <!-- Display categories as buttons -->
-        <p class="border categories rounded-2" *ngFor="let category of categories">
-            <button class="btn categories-btn" (click)="changeCategory(category)">{{ category }}</button>
-        </p>
-    </div>
 
-    <!-- Table of Gifts -->
-    <div class="table-responsive">
-        <table class="table border-0 table-hover">
-            <!-- Table headers -->
-            <div class="d-flex justify-content-between   p-2 fw-bold bg-light ">
-                <p>Serial No</p>
-                <p>Gift name</p>
-                <p>Gift image</p>
-                <p>Category</p>
-                <p>Value</p>
-            </div>
-            <!-- Display individual gifts in rows -->
-            <div class="d-flex justify-content-between align-items-centerborder-bottom border-top py-3"
-                *ngFor="let gift of selectedCategoryGifts">
-                <p>{{ gift.id }}</p>
-                <p>{{ gift.name }}</p>
-                <p><img [src]="gift.imageUrl" alt="Gift Image" style="width: 50px; height: 50px;"
-                        class="border rounded-2"></p>
-                <p>{{ gift.category }}</p>
-                <div class="d-flex justify-content-center align-items-center">
-                    <p>{{ gift.value }}</p>
-                    <p class="fa fa-edit" aria-hidden="true"></p>
-                    <p class="fa fa-remove" aria-hidden="true"></p>
-                </div>
-            </div>
-        </table>
-    </div>
+  <!-- Categories Navigation -->
+  <div class="mb-2 categories-nav">
+    <!-- Display categories as buttons -->
+    <p class="border categories rounded-2" *ngFor="let category of categories">
+      <button class="btn categories-btn" (click)="changeCategory(category)">{{ category }}</button>
+    </p>
+  </div>
+
+  <!-- Table of Gifts -->
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <!-- Table headers -->
+      <thead class="bg-light">
+        <tr>
+          <th>Serial No</th>
+          <th>Gift name</th>
+          <th>Gift image</th>
+          <th>Category</th>
+          <th>Value</th>
+
+        </tr>
+      </thead>
+      <!-- Display individual gifts in rows -->
+      <tbody>
+        <tr *ngFor="let gift of selectedCategoryGifts">
+          <td>{{ gift.id }}</td>
+          <td>{{ gift.name }}</td>
+          <td>
+            <img [src]="gift.imageUrl" alt="Gift Image" style="width: 50px; height: 50px;" class="border rounded-2">
+          </td>
+          <td>{{ gift.category }}</td>
+          <td class="">{{ gift.value }}
+            <span class="fa fa-edit ms-2" aria-hidden="true"></span>
+            <span class="fa fa-remove mx-2" aria-hidden="true"></span>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 
 </div>
