@@ -10,6 +10,7 @@ import { LeftSidebarComponent } from './left-sidebar/left-sidebar.component';
 import { GiftHomeComponent } from './gift-home/gift-home.component';
 import { AddedGiftComponent } from './added-gift/added-gift.component';
 import { FormsModule } from '@angular/forms';
+import { CoinHomeComponent } from './coin-home/coin-home.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     LeftSidebarComponent,
     GiftHomeComponent,
     AddedGiftComponent,
+    CoinHomeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [ ],
