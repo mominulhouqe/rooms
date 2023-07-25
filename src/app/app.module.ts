@@ -11,6 +11,7 @@ import { GiftHomeComponent } from './gift-home/gift-home.component';
 import { AddedGiftComponent } from './added-gift/added-gift.component';
 import { FormsModule } from '@angular/forms';
 import { CoinHomeComponent } from './coin-home/coin-home.component';
+import { ReportHomeComponent } from './report-home/report-home.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CoinHomeComponent } from './coin-home/coin-home.component';
     GiftHomeComponent,
     AddedGiftComponent,
     CoinHomeComponent,
+    ReportHomeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [ ],

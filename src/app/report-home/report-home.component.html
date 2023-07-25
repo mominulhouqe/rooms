@@ -1,0 +1,41 @@
+<div class="container table-container">
+  <h2>Reports of user profile</h2>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+
+        <th>Name</th>
+        <th>Email</th>
+        <th>Warning Level</th>
+        <th>Date</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of allusers">
+
+        <td>
+          <div class="d-flex gap-3">
+            <div>
+              <img src="{{user?.user?.image}}" alt="" width="50px" class="img-fluid rounded-circle">
+            </div>
+            <div>
+              <h6>{{user?.user?.name}}</h6>
+              <p>ID: {{user?.user?.Id}}</p>
+            </div>
+          </div>
+
+
+        </td>
+        <td>{{ user.email }}</td>
+        <td>
+          <!-- Convert warningLevel to an array and loop through the array -->
+          <i class="{{ icon }} icons" *ngFor="let icon of getWarningLevelAsArray(user.warningLevel)"
+            aria-hidden="true"></i>
+        </td>
+        <td>{{ user.date }}</td>
+        <td><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

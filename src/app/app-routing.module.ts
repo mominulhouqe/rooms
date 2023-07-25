@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { GiftHomeComponent } from './gift-home/gift-home.component';
 import { AddedGiftComponent } from './added-gift/added-gift.component';
 import { CoinHomeComponent } from './coin-home/coin-home.component';
+import { ReportHomeComponent } from './report-home/report-home.component';
 
 const routes: Routes = [
   { path: '', component: RoomsComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'gift-home', component: GiftHomeComponent },
   { path: 'addgift', component: AddedGiftComponent },
   { path: 'coin-home', component: CoinHomeComponent },
+  { path: 'report-home', component: ReportHomeComponent },
 ];
 
 @NgModule({
