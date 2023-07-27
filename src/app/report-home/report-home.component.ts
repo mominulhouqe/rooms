@@ -80,4 +80,6 @@ export class ReportHomeComponent {
   getWarningLevelAsArray(warningLevel: string | string[]): string[] {
     return Array.isArray(warningLevel) ? warningLevel : [warningLevel];
   }
+
+ 
 }

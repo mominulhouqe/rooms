@@ -12,6 +12,9 @@ import { AddedGiftComponent } from './added-gift/added-gift.component';
 import { FormsModule } from '@angular/forms';
 import { CoinHomeComponent } from './coin-home/coin-home.component';
 import { ReportHomeComponent } from './report-home/report-home.component';
+import {  HttpClientModule } from '@angular/common/http';
+import { PostesHomeComponent } from './postes-home/postes-home.component';
+import { PhotoGallaryComponent } from './photo-gallary/photo-gallary.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +27,10 @@ import { ReportHomeComponent } from './report-home/report-home.component';
     AddedGiftComponent,
     CoinHomeComponent,
     ReportHomeComponent,
+    PostesHomeComponent,
+    PhotoGallaryComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule,FormsModule, HttpClientModule],
   providers: [ ],
   bootstrap: [AppComponent],
 })

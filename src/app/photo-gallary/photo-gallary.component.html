@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 mb-2" *ngFor="let photo of photos">
+            <div class="card">
+                <img src="{{ photo.url }}" alt="{{ photo.title }}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{ photo.title }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

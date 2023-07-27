@@ -8,6 +8,8 @@ import { GiftHomeComponent } from './gift-home/gift-home.component';
 import { AddedGiftComponent } from './added-gift/added-gift.component';
 import { CoinHomeComponent } from './coin-home/coin-home.component';
 import { ReportHomeComponent } from './report-home/report-home.component';
+import { PostesHomeComponent } from './postes-home/postes-home.component';
+import { PhotoGallaryComponent } from './photo-gallary/photo-gallary.component';
 
 const routes: Routes = [
   { path: '', component: RoomsComponent },
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'addgift', component: AddedGiftComponent },
   { path: 'coin-home', component: CoinHomeComponent },
   { path: 'report-home', component: ReportHomeComponent },
+  { path: 'post', component: PostesHomeComponent },
+  { path: 'gallary', component: PhotoGallaryComponent },
 ];
 
 @NgModule({

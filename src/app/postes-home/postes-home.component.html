@@ -1,0 +1,16 @@
+<p>postes-home works!</p>
+
+
+<div>
+    <div *ngFor="let user of users" class="card p-2 mb-2">
+       <h5>ID:{{user.id}} </h5>
+        
+       <p class="card-title fw-bold">
+        Name:{{user.title}}
+       </p>
+       <p>
+        Discripiton: {{user.body}}
+       </p>
+
+    </div>
+</div>
